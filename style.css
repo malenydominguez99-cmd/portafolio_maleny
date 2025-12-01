@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #F2E6E1;
+    color: beige;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+    width: 100%;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;    
+    top: 0;
+    left: 0;
+
+    background-color: beige;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+
+    border-bottom: 1px solid #D7C5C2;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo span {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #6B4C4B; 
+    letter-spacing: -1px;
+}
+
+.links {
+    display: flex;
+    gap: 30px;
+}
+
+.links a {
+    position: relative;
+    color: #6B4C4B;
+    text-decoration: none;
+    font-weight: 500;
+    padding-bottom: 4px;
+    transition: color 0.3s;
+}
+
+.links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #C4A69F; 
+    transition: width 0.3s;
+}
+
+.links a:hover::after,
+.links a.active::after {
+    width: 100%;
+}
+
+.links a:hover,
+.links a.active {
+    color: #B0756A; 
+}
+
+
+.contact-bnt a {
+    background-color: #BFA3A1;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.contact-bnt a:hover {
+    background-color: #A67872;
+}
+
+.hamburg {
+    display: none;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: #6B4C4B;
+}
+
+.dropdown {
+    position: fixed;
+    background-color: #F2E6E1; 
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    padding: 80px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    transition: 0.4s;
+    z-index: 999;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: #6B4C4B;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.cancel {
+    font-size: 2rem;
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    cursor: pointer;
+    color: #6B4C4B;
+}
+
+/* MAIN */
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 180px 40px 60px;
+}
+
+.main-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+
+.image {
+    background-color: #F2E6E1; 
+    border-radius: 50%;
+    padding: 8px;
+    box-shadow: 0 0 15px 5px rgba(242, 230, 225, 0.7);
+    display: inline-block;
+}
+
+.image img {
+    border-radius: 50%;
+    display: block;
+    width: 380px;
+}
+
+.content {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #6B4C4B;
+}
+
+.content h1 span {
+    color: #B0756A;
+}
+
+.content p {
+    margin-top: 15px;
+    font-weight: 400;
+    color: black;
+    line-height: 1.5;
+    max-width: 500px;
+    text-align: left;
+}
+
+
+.social-links {
+    margin: 20px 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-links i {
+    font-size: 2rem;
+    color: #BFA3A1;
+    transition: 0.3s;
+}
+
+.social-links i:hover {
+    color: #A67872;
+    transform: translateY(-3px);
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.btn button {
+    padding: 10px 22px;
+    border: none;
+    background-color: #BFA3A1;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn button:hover {
+    background-color: #A67872;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    .links {
+        display: none;
+    }
+
+    .hamburg {
+        display: block;
+    }
+
+    .main-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image img {
+        width: 260px;
+    }
+}
+
+@media(max-width: 500px) {
+    nav {
+        padding: 15px 20px;
+    }
+}

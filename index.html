@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maleny Portafolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <span>Maleny</span>
+            </div>
+            <div class="links">
+                <div class=""><a href="#">Inicio</a></div>
+                <div class="link"><a href="#">Sobre mí</a></div>
+                <div class="link"><a href="#">Proyectos</a></div>
+                <div class="link contact-bnt"><a href="#">Contáctame</a></div>
+            </div>
+        </div>
+        <i class="fa-solid fa-bars hamburg"></i>
+    </nav>
+    <div class="dropdown">
+        <a href="#">Inicio</a>
+        <a href="#">Sobre mí</a>
+        <a href="#">Proyectos</a>>
+        <a href="#">Contáctame</a>
+        <i class="fa-solid fa-xmark cancel"></i>
+    </div>
+    <section>
+        <div class="main-container">
+            <div class="image">
+                <img src="assets/maleny.png" alt="foto de Maleny">
+            </div>
+            <div class="content">
+                <h1>Hola, soy <span>Maleny Domínguez</span></h1>
+                <p style="margin-top: 15px; font-weight: 400;">
+                    Tengo formación en Ingeniería en Tecnologías de la Información y Comunicación, 
+                    con preparación en fundamentos de desarrollo y tecnologías de la información.
+                    Actualmente me estoy capacitando como Desarrolladora Java Full Stack, 
+                    con enfoque en crecer profesionalmente y adquirir experiencia práctica. 
+                    Me caracterizo por mis valores de compromiso, disciplina y constante superación, 
+                    siempre buscando aprender y enfrentar nuevos retos.
+                </p>
+
+                <div class="social-links">
+                    <a href="https://github.com/malenydominguez99-cmd"><i class="fa-brands fa-square-github"></i></a>
+                    <a href="https://www.linkedin.com/in/maleny-dominguez/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/mal3ny_/"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+
+                <div class="btn">
+                    <button>Ver CV</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SCRIPT -->
+    <script>
+        const hamburg = document.querySelector(".hamburg");
+        const dropdown = document.querySelector(".dropdown");
+        const cancelBtn = document.querySelector(".cancel");
+
+        hamburg.onclick = () => {
+            dropdown.style.right = "0";
+        };
+
+        cancelBtn.onclick = () => {
+            dropdown.style.right = "-100%";
+        };
+    </script>
+
+</body>
+</html>
